@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function RandomColor() {
   const [typeOfColor, setTypeOfColor] = useState("hex");
@@ -24,6 +24,11 @@ export default function RandomColor() {
 
     setColor(`rgb(${r},${g},${b})`);
   }
+
+  useEffect(()=>{
+    if(typeOfColor === 'rgb') handleClickRandomRgbColor();
+    else handleClickRandomHexColor();
+  }, [typeOfColor]);
 
   return (
     <div
@@ -58,7 +63,9 @@ export default function RandomColor() {
           alignItems: "center",
           color: '#fff',
           fontSize: '60px',
-          marginTop: '40px',
+          marginTop: '50px',
+          flexDirection: 'column',
+          gap:'20px'
         }}
       >
         <h3>{typeOfColor}</h3>
