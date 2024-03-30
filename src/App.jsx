@@ -1,6 +1,5 @@
 import { useState } from "react";
 
-
 import Accordion from "./components/accordion";
 import RandomColor from "./components/random-color";
 import StarRating from "./components/star-rating";
@@ -9,7 +8,8 @@ import LoadMoreData from "./components/load-more-data";
 import TreeView from "./components/tree-view";
 import menus from "./components/tree-view/data";
 import QRCodeGenerator from "./components/qr-code-generator";
-
+import LightDarkMode from "./components/ligth-dark-mode";
+import ScrollIndicator from "./components/scroll-indicator";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -29,7 +29,11 @@ function App() {
       {/* Tree view Component */}
       {/* <TreeView menus={menus} /> */}
       {/* QR code generatpr */}
-      <QRCodeGenerator />
+      {/* <QRCodeGenerator /> */}
+      {/*Light Dark Mode Component */}
+      {/* <LightDarkMode /> */}
+      {/*Scroll Indicator Component */}
+      <ScrollIndicator url={"https://dummyjson.com/products?limit=100"} />
     </>
   );
 }
