@@ -12,6 +12,7 @@ import LightDarkMode from "./components/ligth-dark-mode";
 import ScrollIndicator from "./components/scroll-indicator";
 import TabsTest from "./components/custom-tabs/tabs-test";
 import ModalTest from "./components/custom-modal-popup/modal-test";
+import GithubProfileFinder from "./components/github-profile-finder";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -39,7 +40,9 @@ function App() {
       {/* Custom Tab Component */}
       {/* <TabsTest /> */}
       {/* Custom Modal Component */}
-      <ModalTest />
+      {/* <ModalTest /> */}
+      {/* Github profile finder */}
+      <GithubProfileFinder />
     </>
   );
 }
